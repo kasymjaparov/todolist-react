@@ -1,6 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import {constants} from './constants'
 import shortid from 'shortid'
+import { act } from 'react-dom/test-utils'
 const initialState = [{
     text:"first todo",
     completed:false,
@@ -19,6 +20,19 @@ switch(action.type) {
                let newTodos = [...state]
                return newTodos.filter(todo=>todo.id !== action.payload)
                
+               case constants.UPDATE_TODO:
+             let newTodo = [...state]
+              let index = -1
+             for (let i = 0; i < newTodo.length; i++) {
+                index++;
+                 if(newTodo[i].id==action.payload.id){
+                  break;
+                 }
+             }
+              if(index!=-1){
+                  newTodo[index]=action.payload
+                  return newTodo
+              }
     default: 
     return state 
 }

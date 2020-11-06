@@ -25,6 +25,16 @@
     font-size: 20px;
     margin: 0px 10px 0px 70px ;
 }
+.todo_text_input{
+    height: 50px;
+    border: 0;
+    background: rgb(179, 184, 230);
+    border-radius: 20px;
+    font-size: 20px;
+}
+.todo_text_input::placeholder{
+    color: black;
+}
 .todo_btn{
     height: 50px;
     width: 50px;

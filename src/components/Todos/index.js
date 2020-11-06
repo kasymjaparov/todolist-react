@@ -8,7 +8,7 @@ function App() {
     <div className="todos">
       {
         todos.length ? todos.map(item=>(
-              <Todo todoId={item.id} key={item.id} data={item.text}/>
+              <Todo  key={item.id} todo={item}/>
              )):<div className='todos_empty'>No tasks</div>
       }
     </div>
