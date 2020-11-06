@@ -1,0 +1,52 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+.todo{
+    /* width: calc(50% + 60px); */
+    margin: 10px auto 0 auto ;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom:  -500px;
+    animation: animateBlockLeftRight 1s forwards;
+}
+@keyframes animateBlockLeftRight {
+    100%{
+       bottom: 0;
+    }
+}
+.todo_text{
+    width: 50%;
+    height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 0px 10px ;
+    border-radius: 20px;
+    background: rgb(179, 184, 230);
+    font-size: 20px;
+    margin: 0px 10px 0px 70px ;
+}
+.todo_btn{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    margin: 0px 10px 0px 0px ;
+}
+.todo_btn i{
+    transition: all 0.3s ease;
+}
+.todo_btn:hover{
+    background: rgb(15, 14, 14);
+}
+.todo_btn:hover i{
+    color: blanchedalmond;
+}
+.todo_btn i{
+    font-size: 25px;
+}
+.todos_empty{
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    margin: 50px 0px 0px 0px ;
+}
